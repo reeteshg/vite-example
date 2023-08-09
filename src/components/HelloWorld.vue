@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useMouse } from '@vueuse/core'
 import { ref } from 'vue'
 import { VBtn } from 'vuetify/components/VBtn'
 
@@ -29,6 +30,7 @@ defineSlots<{
 }>()
 
 const count = ref(0)
+const { x, y, sourceType } = useMouse()
 
 /**
  * Testing
@@ -36,38 +38,40 @@ const count = ref(0)
  * @param amount This is a test
  * @returns the best item
  */
-function method (amount = 1): string {
+function addNumber (amount = 1): string {
   count.value += amount
   emit('change', count.value)
   return 'hey'
 }
 
-defineExpose({
-  /**
-   * This is a method
-   *
-   * @param amount The Amount to increment by.
-   * @emits change
-   */
-  method
-})
-
 </script>
 
 <template>
-  <div class="card">
-    <v-btn
-      @click="method(1)"
-    >
-      {{ msg }} is {{ count }}
-    </v-btn>
-    <slot content="foo" />
-  </div>
+  <p class="success-container">
+    Congrats.  You have successfully started the playground/sandbox environment
+  </p>
+  <v-btn
+    @click="addNumber(1)"
+  >
+    {{ msg }} is {{ count }}
+    <v-icon
+      icon="mdi-plus"
+      class="pl-2"
+    />
+  </v-btn>
+  <br><br>
+  <p>VueUse Example</p>
+  <ul>
+    <li>x: {{ x }}</li>
+    <li>y: {{ y }}</li>
+    <li>sourceType: {{ sourceType }}</li>
+  </ul>
 </template>
 
 <style scoped lang="sass">
-.read-the-docs
-  color: #888
+.success-container
+  color: blue
+  font-size: 20px
 </style>
 
 <docs lang="md">

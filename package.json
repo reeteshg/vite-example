@@ -34,12 +34,10 @@
     "pinia": "^2.1.4",
     "vue": "^3.2.47",
     "vue-router": "^4.2.4",
-    "vuetify": "^3.3.6",
-    "zod": "^3.21.4"
+    "vuetify": "^3.3.6"
   },
   "devDependencies": {
     "@mdi/font": "^7.2.96",
-    "@originjs/vite-plugin-federation": "^1.2.3",
     "@types/lodash": "^4.14.195",
     "@typescript-eslint/eslint-plugin": "^5.60.1",
     "@typescript-eslint/parser": "^5.60.1",
