@@ -38,7 +38,7 @@ const { x, y, sourceType } = useMouse()
  * @param amount This is a test
  * @returns the best item
  */
-function addNumber (amount = 1): string {
+function increaseNumber (amount = 1): string {
   count.value += amount
   emit('change', count.value)
   return 'hey'
@@ -51,7 +51,7 @@ function addNumber (amount = 1): string {
     Congrats.  You have successfully started the playground/sandbox environment
   </p>
   <v-btn
-    @click="addNumber(1)"
+    @click="increaseNumber(1)"
   >
     {{ msg }} is {{ count }}
     <v-icon
