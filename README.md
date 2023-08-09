@@ -1,3 +1,23 @@
+## Vite Example
+
+```bash
+# install dependencies
+npm install
+
+# run dev server
+npm run dev
+
+# run unit test
+npm run test
+
+# run linting tool
+npm run lint
+
+# build the application
+npm run build
+```
+
+
 ## Recommended IDE Setup
 
 - [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
